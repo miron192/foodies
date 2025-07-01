@@ -7,10 +7,11 @@ export async function generateMetadata({ params }) {
   const meal = getMeal(params.mealsSlug);
   if (!meal) {
     notFound();
-  return {
-    title: meal.title,
-    description: meal.summary,
-  };
+    return {
+      title: meal.title,
+      description: meal.summary,
+    };
+  }
 }
 
 const page = ({ params }) => {
